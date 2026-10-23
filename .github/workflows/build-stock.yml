@@ -21,11 +21,11 @@ permissions:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-2022
     strategy:
       fail-fast: false
       matrix:
-        platform: [x64, x86, ARM64EC]
+        platform: [x64, x86]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
