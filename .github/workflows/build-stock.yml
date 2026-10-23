@@ -73,5 +73,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Stock_${{ matrix.platform }}_Release
-          path: bin\${{ matrix.platform }}\Release\Stock.dll
+          path: bin\**\Release\Stock.dll
           if-no-files-found: error
