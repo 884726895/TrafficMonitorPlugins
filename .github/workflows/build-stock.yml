@@ -7,7 +7,7 @@ name: build-stock-plugin
 #   2. Add file -> Create new file: .github/workflows/build-stock.yml
 #      把本文件全部内容粘贴进去，Commit（会自动触发构建）
 #      或进入 Actions 页手动 Run workflow
-#   3. 在 Actions 运行页下载 Stock_x64/Win32/ARM64EC 的 Stock.dll
+#   3. 在 Actions 运行页下载 Stock_x64/x86/ARM64EC 的 Stock.dll
 # 说明：期货支持补丁（Plugins/Stock 5 个文件）以 base64 内嵌于本文件，
 #       由云端 git apply 自动应用，无需本地 git。
 # ============================================================
@@ -25,7 +25,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [x64, Win32, ARM64EC]
+        platform: [x64, x86, ARM64EC]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
